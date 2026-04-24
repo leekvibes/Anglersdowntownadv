@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────
+   ANGLER WATERSPORTS — DARK FINTECH THEME
+   Palette derived from the Angler Watersports logo (dark navy
+   + brass gold). Semantic tokens drive every component.
+
+   Legacy token aliases (blue-brand, yellow-brand, etc.) are
+   preserved so pages that have not been migrated still render
+   in the new palette. Remove the aliases once every file has
+   been migrated to semantic tokens.
+   ────────────────────────────────────────────────────────── */
+
+@theme inline {
+  /* Base surfaces */
+  --color-bg: #0A0F1E;
+  --color-bg-deep: #05080F;
+  --color-surface: #0F1729;
+  --color-surface-2: #172338;
+  --color-surface-hi: #1F2C44;
+
+  /* Lines */
+  --color-border: #1F2C44;
+  --color-border-strong: #2A3955;
+
+  /* Accent (brass gold from logo) */
+  --color-accent: #D4A017;
+  --color-accent-hi: #E5B233;
+  --color-accent-dim: #8B6B1A;
+  --color-accent-glow: #F0B832;
+
+  /* Text */
+  --color-ink: #F5F5F0;
+  --color-ink-dim: #8B94A8;
+  --color-ink-mute: #5A6478;
+
+  /* Status */
+  --color-success: #10B981;
+  --color-warn: #F59E0B;
+  --color-danger: #EF4444;
+
+  /* Fonts (wired up in layout.tsx via next/font) */
+  --font-sans: var(--font-geist), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ── LEGACY ALIASES — for pages not yet migrated ──
+     These map OC Downtown Adventures tokens to Angler equivalents
+     so unmigrated components render in the new palette. */
+  --color-blue-brand: #D4A017;      /* accent */
+  --color-blue-dark: #0A0F1E;       /* bg */
+  --color-blue-light: #172338;      /* surface-2 (as pill bg) */
+  --color-yellow-brand: #E5B233;    /* accent-hi */
+  --color-yellow-hover: #D4A017;    /* accent */
+  --color-dark: #0A0F1E;            /* bg */
+  --color-gray-text: #8B94A8;       /* ink-dim */
+  --color-gray-light: #0F1729;      /* surface (flip: was pale, now dark panel) */
+  --color-gray-border: #1F2C44;     /* border */
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #0A0F1E;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-geist), system-ui, -apple-system, sans-serif;
+  color: #F5F5F0;
+  background: #0A0F1E;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scroll-triggered reveal animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+/* ── Fine grid overlay (for section backgrounds) ── */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.grid-bg-fine {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Subtle scanline overlay for data panels ── */
+.scanlines {
+  position: relative;
+}
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.012) 50%);
+  background-size: 100% 3px;
+  pointer-events: none;
+}
+
+/* ── Badge fade-in ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Ticker scroll ── */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.ticker-scroll {
+  animation: ticker 45s linear infinite;
+}
+
+/* ── Auto-scroll gallery ── */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.auto-scroll-left { animation: scroll-left 40s linear infinite; }
+.auto-scroll-right { animation: scroll-right 40s linear infinite; }
+.auto-scroll-left:hover,
+.auto-scroll-right:hover { animation-play-state: paused; }
+
+/* ── Ambient accent glow (for hero / CTAs) ── */
+@keyframes accent-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.accent-pulse { animation: accent-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* ── CSS-only mobile menu (keeps working without JS) ── */
+#menu-cb:checked ~ .mobile-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+#menu-cb:checked ~ .mobile-menu {
+  translate: 0;
+}
+body:has(#menu-cb:checked) {
+  overflow: hidden;
+}
+
+/* ── Hide scrollbar utility ── */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Selection (brass on dark) ── */
+::selection {
+  background: #D4A017;
+  color: #0A0F1E;
+}
+
+/* ── Monospace numeric utility — use on any stat/price ── */
+.mono-num {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
