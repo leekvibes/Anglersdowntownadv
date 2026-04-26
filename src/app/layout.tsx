@@ -20,9 +20,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
-const siteUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : SITE_URL;
+/* Always use the public production domain for metadataBase. process.env.VERCEL_URL
+   resolves to the per-deployment *.vercel.app URL, which is access-restricted in
+   production — that breaks og:image fetches by social crawlers. Hardcoding SITE_URL
+   ensures share previews always point at anglerwatersports.com. */
+const siteUrl = SITE_URL;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
