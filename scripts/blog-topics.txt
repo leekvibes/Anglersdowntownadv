@@ -1,17 +1,22 @@
 # Blog topic queue for Angler Watersports
 #
-# How this works:
-#   - The weekly cron (.github/workflows/draft-weekly.yml) picks the first
-#     non-comment line below, drafts a post with `npm run draft`, opens a
-#     PR for review, then prepends a "# " to that line so it isn't picked
-#     again. You'll get a GitHub email when each PR opens.
-#   - Add new topics by appending to the end of this file.
-#   - Skip a topic by adding "# " in front of it manually.
-#   - Reorder freely — the cron always picks the FIRST non-# line.
+# This is a reference list of 30 blog post ideas, used manually when
+# either you (Malek) or the client decide it's time to publish a post.
 #
-# Tone of topics: factual, locally specific, useful to a real customer
-# searching Google. Each becomes a 350-550 word post in Angler's voice
-# (no hype, no AI clichés, no overlap with OCA Watersports' phrasing).
+# How to use it:
+#   - Pick any topic below.
+#   - Run:  npm run draft "<that exact topic>"
+#     (or: npm run draft:queue   to auto-pick the first non-# line)
+#   - The drafter writes src/content/blog/<slug>.mdx with `draft: true`.
+#   - Review/edit, remove the `draft: true` line, commit, push.
+#   - Vercel auto-deploys, post is live.
+#
+# After using a topic, prepend "# " to that line so you don't reuse it.
+# Add new ideas by appending to the end of the file.
+#
+# NOT automated: there's no cron job — drafts only happen when someone
+# manually runs the script. API costs (~$0.05–$0.10 per post via Claude)
+# go to whoever's ANTHROPIC_API_KEY is in their local .env.local.
 #
 # ── WILDLIFE / NATURE ────────────────────────────────────────────────
 Where to spot wild horses on Assateague Island from the water
