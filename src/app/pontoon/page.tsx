@@ -215,8 +215,8 @@ export default function PontoonPage() {
           <TerminalKicker prefix="RENTALS" label="PONTOON // SELF_CAPTAINED" className="mb-4 justify-center" />
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] mb-6 tracking-tight">
-            Your bay.<br />
-            <span className="text-accent-hi">Your rules.</span>
+            The bay,<br />
+            <span className="text-accent-hi">on your terms.</span>
           </h1>
 
           <p className="text-base md:text-lg text-ink-dim mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -268,19 +268,20 @@ export default function PontoonPage() {
             <ScrollReveal direction="left">
               <TerminalKicker prefix="EXPERIENCE" label="THE_DAY" className="mb-5" />
               <h2 className="text-4xl md:text-5xl font-bold text-ink mb-6 leading-[1.05] tracking-tight">
-                You&apos;re the<br />
-                <span className="text-accent-hi">captain.</span>
+                Run your<br />
+                <span className="text-accent-hi">own day.</span>
               </h2>
               <div className="text-ink-dim text-base md:text-lg leading-relaxed space-y-4 max-w-lg">
                 <p>
-                  Cruise the calm waters of Assateague Bay with your crew. Anchor
-                  along Assateague Island and watch wild horses graze feet from the
-                  water. Pull up to a sandbar and swim. Drop a fishing line. Play your
-                  music. Pour a drink. It&apos;s your day.
+                  Cross Assateague Bay with your crew. Drop anchor near
+                  Assateague Island and watch the wild horses come to the
+                  shoreline. Beach on a sandbar and swim. Bring fishing gear.
+                  Bring music. Bring food. Set your own pace.
                 </p>
                 <p>
-                  Up to 10 people on board. No boating experience required. Full
-                  orientation before you leave the dock. 2 to 8 hours, you pick.
+                  Up to 10 guests on board. No boating experience required —
+                  full orientation before you leave the dock. Pick a window
+                  from 2 to 8 hours and we'll have a boat waiting.
                 </p>
               </div>
             </ScrollReveal>
@@ -406,11 +407,11 @@ export default function PontoonPage() {
           <ScrollReveal className="text-center mb-10 max-w-2xl mx-auto">
             <TerminalKicker prefix="MAP" label="OPEN_WATER" className="mb-5 justify-center" />
             <h2 className="text-3xl md:text-5xl font-bold text-ink tracking-tight">
-              Your Bay to Explore
+              The Bay, End to End
             </h2>
             <p className="text-ink-dim text-base md:text-lg mt-4 leading-relaxed">
               50+ sq mi of open water. Anchor anywhere — sandbars, wild horse shores,
-              sunset spots. No fixed route. You captain the day.
+              sunset spots. No fixed route. You set the day.
             </p>
           </ScrollReveal>
           <ScrollReveal>
@@ -498,7 +499,7 @@ export default function PontoonPage() {
           <ScrollReveal className="text-center mb-14 max-w-2xl mx-auto">
             <TerminalKicker prefix="PRICING" label="DURATIONS" className="mb-5 justify-center" />
             <h2 className="text-3xl md:text-5xl font-bold text-ink tracking-tight">
-              Pick Your Duration
+              Set Your Hours
             </h2>
             <p className="text-ink-dim text-lg mt-4">
               From a 2-hour cruise to a full-day run. Up to 10 guests on every boat.

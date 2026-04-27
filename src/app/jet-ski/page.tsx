@@ -64,10 +64,10 @@ const SIGHTS = [
   },
   {
     code: "03",
-    title: "Open Water",
-    desc: "The coast's largest riding area — wide-open throttle across crystal-clear bay waters.",
+    title: "Throttle Time",
+    desc: "Wide-open bay water across 50+ square miles — clear lanes, no idle zones, full speed.",
     image: IMAGES.scenery1,
-    alt: "Open water riding area on Assateague Bay for jet ski tours Ocean City Maryland",
+    alt: "Wide open bay water for jet ski tours Ocean City Maryland",
   },
   {
     code: "04",
@@ -190,8 +190,9 @@ export default function JetSkiPage() {
           </h1>
 
           <p className="text-base md:text-lg text-ink-dim mb-8 max-w-2xl mx-auto leading-relaxed">
-            1-hour tours on brand-new jet skis across Assateague Bay. Certified guides,
-            wild horses, dolphins, and the largest riding area on the coast.
+            1-hour tours on brand-new jet skis across Assateague Bay. Certified
+            guides, Assateague's wild horse coastline, bottlenose dolphins, and
+            50+ square miles of open water.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
@@ -244,14 +245,14 @@ export default function JetSkiPage() {
               </h2>
               <div className="text-ink-dim text-base md:text-lg leading-relaxed space-y-4 max-w-lg">
                 <p>
-                  The moment you leave the dock, you&apos;re on Ocean City&apos;s largest
-                  and most scenic riding area. Waterfront homes, open bay, and the
+                  Once you clear the no-wake zone, you&apos;re running 50+ square
+                  miles of bay water. Waterfront homes, open lanes, and the
                   coastline of Assateague Island — all in one hour.
                 </p>
                 <p>
-                  Your guide leads a safe route past wild horse habitat and through
-                  dolphin territory. First-timers and experienced riders get the same
-                  high-touch experience, every time.
+                  Your Maryland-certified guide leads the run past wild horse
+                  habitat and through dolphin territory. First-timers and
+                  veterans get the same high-touch experience every time.
                 </p>
               </div>
             </ScrollReveal>

@@ -60,7 +60,7 @@ const VALUES = [
   {
     code: "03",
     title: "Downtown Dock",
-    desc: "312 Talbot Street puts you on the largest riding area in Ocean City — direct bay access, free parking, no traffic to fight.",
+    desc: "312 Talbot Street puts you on 50+ sq miles of open bay water — direct Assateague access, free parking, no traffic to fight.",
   },
   {
     code: "04",
@@ -155,10 +155,11 @@ export default function AboutPage() {
                 </p>
                 <p>
                   The dock at <strong className="text-ink">312 Talbot Street</strong>{" "}
-                  puts you on the largest riding area in Ocean City — 50+ square
-                  miles of open bay water, with Assateague Island&apos;s wild
-                  horse coastline a short run away. We chose downtown deliberately:
-                  free parking, fast water access, no traffic to start your day.
+                  puts you on 50+ square miles of open bay water — Assateague
+                  Island&apos;s wild horse coastline a short run away, sandbars
+                  at low tide, dolphin territory through the inlet. Downtown
+                  by design: free parking, fast water access, no traffic to
+                  start your day.
                 </p>
                 <p>
                   What we offer is the run done right. A guided 1-hour jet ski

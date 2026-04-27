@@ -200,9 +200,9 @@ export default function Home() {
                 <span className="text-accent-hi">Guided every time.</span>
               </h2>
               <p className="text-ink-dim text-lg leading-relaxed mb-8 max-w-lg">
-                Brand-new jet skis on the largest riding area on the coast. Certified
-                guides, full safety briefing, and a route that puts you within eyeshot
-                of wild horses and dolphins in their habitat.
+                Brand-new jet skis across 50+ square miles of Assateague Bay.
+                Certified guides, full safety briefing, and a run that puts you
+                within eyeshot of wild horses and bottlenose dolphins in their habitat.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -313,8 +313,8 @@ export default function Home() {
             <ScrollReveal direction="right">
               <TerminalKicker prefix="RENTALS" label="PONTOON" className="mb-5" />
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-[1.05] tracking-tight">
-                Your bay.<br />
-                <span className="text-accent-hi">Your rules.</span>
+                The bay,<br />
+                <span className="text-accent-hi">on your terms.</span>
               </h2>
               <p className="text-ink-dim text-lg leading-relaxed mb-8 max-w-lg">
                 Captain your own pontoon across Assateague Bay. Beach at wild horse
@@ -774,8 +774,8 @@ export default function Home() {
               },
               {
                 code: "03",
-                title: "Largest Riding Area",
-                desc: "50+ square miles of Assateague Bay — wild horse coastline, dolphin territory, sandbars, sunsets.",
+                title: "50+ Sq Mi of Bay",
+                desc: "Assateague Bay end-to-end — wild horse coastline, dolphin territory, sandbars, sunsets.",
               },
               {
                 code: "04",
@@ -836,8 +836,8 @@ export default function Home() {
               <span className="text-accent-hi">your run?</span>
             </h2>
             <p className="text-lg md:text-xl text-ink-dim mb-10 max-w-2xl mx-auto">
-              Reserve your jet ski or pontoon today. 2026 fleet, certified guides, the
-              largest riding area on the coast.
+              Reserve your jet ski or pontoon today. Brand-new 2026 fleet,
+              certified guides, 50+ square miles of bay water.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
