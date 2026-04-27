@@ -21,6 +21,11 @@ export interface BlogPostFrontmatter {
   author?: string;
   tags?: string[];
   readingMinutes?: number;
+  /* Set draft: true to keep the post out of /blog index, /blog/[slug]
+     dynamic routing, and the sitemap. The MDX file lives in the repo
+     so you can edit it; the post simply doesn't render until you
+     remove this line from the frontmatter. */
+  draft?: boolean;
 }
 
 export interface BlogPost extends BlogPostFrontmatter {
@@ -55,6 +60,10 @@ export function getPost(slug: string): BlogPost | null {
       console.warn(`[blog] ${slug}${ext} missing required frontmatter`);
       return null;
     }
+    // Drafts are filtered out of the live site. They stay on disk so
+    // they can be edited; remove `draft: true` from the frontmatter
+    // when ready to publish.
+    if (fm.draft === true) return null;
     return {
       slug,
       title: fm.title,
