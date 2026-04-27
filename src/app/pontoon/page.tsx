@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
-  BOOKING_URL,
   IMAGES,
   PHONE,
   PHONE_HREF,
+  EMAIL,
   HERO_VIDEO_URL,
   HERO_FALLBACK_IMAGE,
   ADDRESS,
@@ -21,9 +21,9 @@ import { StatStrip } from "@/components/primitives/StatStrip";
 import { GradientMesh } from "@/components/primitives/GradientMesh";
 
 export const metadata: Metadata = {
-  title: "Pontoon Boat Rental Ocean City MD | Bay Cruises from $329 | Book Online",
+  title: "Pontoon Boat Rental Ocean City MD | Bay Cruises from $329 | Reserve by Phone",
   description:
-    "Rent a pontoon boat in Ocean City, Maryland — self-captained 2-8 hour cruises on Assateague Bay. See wild horses, anchor at sandbars, bring your own food and drinks. Up to 10 guests. Brand-new boats, free parking downtown. Book online.",
+    "Rent a pontoon boat in Ocean City, Maryland — self-captained 2-8 hour cruises on Assateague Bay. See wild horses, anchor at sandbars, bring your own food and drinks. Up to 10 guests. Brand-new boats, free parking downtown. Call (443) 664-6300 to reserve.",
   keywords: [
     "pontoon boat rental ocean city md",
     "boat rental ocean city maryland",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: `${SITE_URL}/pontoon` },
   openGraph: {
-    title: "Pontoon Boat Rental in Ocean City, MD | From $329",
+    title: "Pontoon Boat Rental in Ocean City, MD | From $329 · Reserve by Phone",
     description:
-      "Self-captained pontoon cruises on Assateague Bay. Wild horses, sandbars, sunsets. Up to 10 guests. Book online.",
+      "Self-captained pontoon cruises on Assateague Bay. Wild horses, sandbars, sunsets. Up to 10 guests. Call to reserve.",
     url: `${SITE_URL}/pontoon`,
     type: "website",
     images: ["/og-logo.png"],
@@ -226,13 +226,10 @@ export default function PontoonPage() {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={PHONE_HREF}
               className="px-8 py-4 bg-accent text-bg font-bold text-base rounded-md hover:bg-accent-hi transition-all shadow-[0_0_40px_rgba(212,160,23,0.25)] hover:scale-[1.02]"
             >
-              <span className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-70 mr-2">[1]</span>
-              Book a Pontoon — From $329
+              Call to Book — From $329
             </a>
             <a
               href={PHONE_HREF}
@@ -463,9 +460,7 @@ export default function PontoonPage() {
             {OCCASIONS.map((occ, i) => (
               <ScrollReveal key={occ.title} delay={i * 80}>
                 <a
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={PHONE_HREF}
                   className="group block"
                 >
                   <div className="relative h-64 rounded-xl overflow-hidden border border-border group-hover:border-accent/50 transition-colors">
@@ -560,16 +555,8 @@ export default function PontoonPage() {
                   Starting rate · 2 hours · up to 10 guests
                 </p>
                 <a
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full py-3.5 bg-accent text-bg text-center font-bold rounded-md hover:bg-accent-hi transition-colors shadow-[0_0_24px_rgba(212,160,23,0.2)]"
-                >
-                  Book Online
-                </a>
-                <a
                   href={PHONE_HREF}
-                  className="block w-full mt-2 py-3 border border-border text-ink text-center font-mono text-sm uppercase tracking-[0.14em] rounded-md hover:border-accent/50 hover:bg-surface transition-colors"
+                  className="block w-full py-3.5 bg-accent text-bg text-center font-bold rounded-md hover:bg-accent-hi transition-colors shadow-[0_0_24px_rgba(212,160,23,0.2)]"
                 >
                   Call {PHONE}
                 </a>
@@ -815,18 +802,16 @@ export default function PontoonPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={PHONE_HREF}
                 className="px-12 py-4 bg-accent text-bg font-bold text-lg rounded-md hover:bg-accent-hi transition-all shadow-[0_0_60px_rgba(212,160,23,0.3)]"
               >
-                Book Now
+                Call to Book
               </a>
               <a
-                href={PHONE_HREF}
+                href={`mailto:${EMAIL}?subject=Pontoon%20Booking%20Inquiry`}
                 className="px-8 py-4 border border-border text-ink font-mono text-sm uppercase tracking-[0.14em] rounded-md hover:border-accent/50 transition-colors"
               >
-                <span className="mono-num normal-case text-base">{PHONE}</span>
+                Email Us
               </a>
             </div>
             <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-mute">

@@ -201,7 +201,6 @@ export default function JetSkiPage() {
               rel="noopener noreferrer"
               className="px-8 py-4 bg-accent text-bg font-bold text-base rounded-md hover:bg-accent-hi transition-all shadow-[0_0_40px_rgba(212,160,23,0.25)] hover:scale-[1.02]"
             >
-              <span className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-70 mr-2">[1]</span>
               Book Your Ride — From $129
             </a>
             <a

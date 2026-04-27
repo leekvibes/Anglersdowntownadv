@@ -15,13 +15,14 @@ const MENU_LINKS = [
   { href: "/", label: "Home" },
   { href: "/jet-ski", label: "Jet Ski Rentals" },
   { href: "/pontoon", label: "Pontoon Boats" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/find-us", label: "Find Us" },
   { href: "/partners", label: "Partners" },
   { href: "/gallery", label: "Gallery" },
   { href: "/faq", label: "FAQ" },
-  { href: "/promotions", label: "Promotions" },
+  { href: "/gift-cards", label: "Gift Cards" },
 ];
 
 const DESKTOP_LINKS = [
@@ -67,7 +68,7 @@ export function Header() {
         >
           <div className="max-w-7xl mx-auto px-4 py-1.5 flex justify-between items-center font-mono text-[11px] uppercase tracking-[0.14em]">
             <span className="text-ink-dim">
-              <span className="text-accent">●</span> Mon–Sun · 08:30 — 20:30 · Free Parking
+              <span className="text-accent">●</span> Mon–Sun · 8:30 AM — 8:30 PM · Free Parking
             </span>
             <a
               href={PHONE_HREF}
@@ -105,10 +106,10 @@ export function Header() {
                 </Link>
               ))}
               <Link
-                href="/promotions"
+                href="/blog"
                 className="ml-2 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-accent-hi border border-accent/40 rounded-md hover:bg-accent/10 transition-colors"
               >
-                Promotions
+                Blog
               </Link>
             </nav>
 
@@ -117,19 +118,18 @@ export function Header() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-bg font-bold text-sm rounded-md hover:bg-accent-hi transition-colors shadow-[0_0_20px_rgba(212,160,23,0.2)]"
+              className="hidden lg:inline-flex items-center px-5 py-2.5 bg-accent text-bg font-bold text-sm rounded-md hover:bg-accent-hi transition-colors shadow-[0_0_20px_rgba(212,160,23,0.2)]"
             >
-              <span className="font-mono text-[10px] uppercase tracking-[0.14em]">Book</span>
-              <span>Now</span>
+              Book Now
             </a>
 
             {/* Mobile right side */}
             <div className="flex lg:hidden items-center gap-2 flex-shrink-0">
               <Link
-                href="/promotions"
+                href="/blog"
                 className="px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-accent-hi border border-accent/40 rounded-md"
               >
-                Promos
+                Blog
               </Link>
 
               <label
@@ -174,14 +174,14 @@ export function Header() {
 
         <nav className="p-3 space-y-0.5">
           {MENU_LINKS.map((link) =>
-            link.label === "Promotions" ? (
+            link.label === "Blog" ? (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
                 className="flex items-center justify-between px-3 py-3 text-sm font-semibold text-accent-hi border border-accent/40 bg-accent/5 rounded-md mt-2"
               >
-                <span>Promotions &amp; Deals</span>
+                <span>Blog &amp; Field Notes</span>
                 <span className="font-mono text-[10px] uppercase tracking-widest">NEW</span>
               </Link>
             ) : (

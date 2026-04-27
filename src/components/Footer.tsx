@@ -51,7 +51,8 @@ export function Footer() {
               {[
                 { href: "/jet-ski", label: "Jet Ski Rentals" },
                 { href: "/pontoon", label: "Pontoon Boat Rentals" },
-                { href: "/promotions", label: "Deals & Promotions" },
+                { href: "/gift-cards", label: "Gift Cards" },
+                { href: "/blog", label: "Blog" },
                 { href: "/gallery", label: "Photo Gallery" },
                 { href: "/faq", label: "FAQ & Policies" },
                 { href: "/about", label: "About" },

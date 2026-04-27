@@ -161,14 +161,12 @@ export default function Home() {
               rel="noopener noreferrer"
               className="px-8 py-4 bg-accent text-bg font-bold text-base rounded-md hover:bg-accent-hi transition-all shadow-[0_0_40px_rgba(212,160,23,0.25)] hover:shadow-[0_0_60px_rgba(212,160,23,0.4)] hover:scale-[1.02]"
             >
-              <span className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-70 mr-2">[1]</span>
               Book Your Session
             </a>
             <a
               href="#adventures"
               className="px-6 py-4 bg-surface/60 backdrop-blur-sm text-ink font-semibold text-base rounded-md border border-border hover:border-accent/50 hover:bg-surface transition-all"
             >
-              <span className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-70 mr-2">[2]</span>
               Explore Rentals
             </a>
           </div>
@@ -325,12 +323,10 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={PHONE_HREF}
                   className="px-8 py-3.5 bg-accent text-bg font-bold rounded-md hover:bg-accent-hi transition-colors"
                 >
-                  Book a Pontoon
+                  Call to Book
                 </a>
                 <Link
                   href="/pontoon"
