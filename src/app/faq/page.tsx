@@ -116,7 +116,7 @@ export default function FaqPage() {
       <section className="relative h-[55vh] min-h-[420px] max-h-[600px] flex items-center justify-center overflow-hidden">
         <Image src={IMAGES.scenery3} alt="Assateague Bay view Ocean City Maryland" fill sizes="100vw" className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/70 via-bg/60 to-bg" />
-        <GradientMesh variant="hero" grid />
+        <GradientMesh variant="hero" />
         <div className="relative z-10 text-center text-ink px-4 max-w-4xl mx-auto">
           <TerminalKicker prefix="ANSWERS" label="FAQ" className="mb-5 justify-center" />
           <h1 className="text-4xl md:text-6xl font-bold leading-[0.95] mb-5 tracking-tight">
@@ -215,7 +215,7 @@ export default function FaqPage() {
       <section className="relative py-24 md:py-28 overflow-hidden">
         <Image src={IMAGES.scenery2} alt="Sunset over Assateague Bay Ocean City MD" fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/90 via-bg-deep/85 to-bg-deep" />
-        <GradientMesh variant="hero" grid />
+        <GradientMesh variant="hero" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <ScrollReveal>
             <TerminalKicker prefix="STILL" label="NEED_HELP" className="mb-5 justify-center" />

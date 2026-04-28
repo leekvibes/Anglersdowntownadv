@@ -120,7 +120,7 @@ export default function Home() {
 
         {/* Layered dark gradient + accent mesh + grid */}
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/75 via-bg/55 to-bg" />
-        <GradientMesh variant="hero" grid />
+        <GradientMesh variant="hero" />
 
         <div className="relative z-10 text-center text-ink px-4 max-w-5xl mx-auto flex flex-col items-center py-16">
           {/* Status row */}
@@ -263,7 +263,6 @@ export default function Home() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-bg-deep via-bg-deep/70 to-transparent" />
-        <div className="absolute inset-0 grid-bg-fine opacity-40" />
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 w-full">
             <ScrollReveal direction="left">
@@ -783,7 +782,7 @@ export default function Home() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/90 via-bg-deep/85 to-bg-deep" />
-        <GradientMesh variant="hero" grid />
+        <GradientMesh variant="hero" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <ScrollReveal>
             <TerminalKicker prefix="BOOK" label="READY_WHEN_YOU_ARE" className="mb-6 justify-center" />

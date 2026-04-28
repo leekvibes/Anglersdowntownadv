@@ -175,7 +175,7 @@ export default function JetSkiPage() {
           <source src={HERO_VIDEO_URL} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/70 via-bg/55 to-bg" />
-        <GradientMesh variant="hero" grid />
+        <GradientMesh variant="hero" />
 
         <div className="relative z-10 text-center text-ink px-4 max-w-4xl mx-auto py-16">
           <div className="flex justify-center mb-5">
@@ -611,7 +611,7 @@ export default function JetSkiPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/90 via-bg-deep/85 to-bg-deep" />
-        <GradientMesh variant="hero" grid />
+        <GradientMesh variant="hero" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <ScrollReveal>
             <TerminalKicker prefix="BOOK" label="READY_TO_RIDE" className="mb-5 justify-center" />

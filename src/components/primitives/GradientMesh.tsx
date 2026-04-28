@@ -10,7 +10,11 @@ interface GradientMeshProps {
 
 export function GradientMesh({
   variant = "hero",
-  grid = true,
+  /* Default off — the fine grid was originally enabled by default for
+     a dashboard-texture feel, but on photo/video overlays it shows up
+     as faint white lines against bright sky/water. Now opt-in only,
+     for dark sections without a background image. */
+  grid = false,
   className = "",
 }: GradientMeshProps) {
   const intensity =

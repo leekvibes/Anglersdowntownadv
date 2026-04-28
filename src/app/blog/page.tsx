@@ -44,7 +44,7 @@ export default function BlogIndexPage() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/70 via-bg/60 to-bg" />
-        <GradientMesh variant="hero" grid />
+        <GradientMesh variant="hero" />
         <div className="relative z-10 text-center text-ink px-4 max-w-4xl mx-auto">
           <TerminalKicker prefix="JOURNAL" label="FIELD_NOTES" className="mb-5 justify-center" />
           <h1 className="text-4xl md:text-6xl font-bold leading-[0.95] mb-5 tracking-tight">
@@ -142,7 +142,7 @@ export default function BlogIndexPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/90 via-bg-deep/85 to-bg-deep" />
-        <GradientMesh variant="hero" grid />
+        <GradientMesh variant="hero" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <ScrollReveal>
             <TerminalKicker prefix="BOOK" label="THE_RIDE" className="mb-5 justify-center" />

@@ -172,7 +172,7 @@ export default async function BlogPostPage({
 
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16 border-b border-border overflow-hidden">
-        <GradientMesh variant="subtle" grid />
+        <GradientMesh variant="subtle" />
         <div className="relative max-w-3xl mx-auto px-4">
           <Link
             href="/blog"
