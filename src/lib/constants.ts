@@ -28,10 +28,9 @@ export const ADDRESS_URL =
   "https://www.google.com/maps/dir//312+Talbot+St,+Ocean+City,+MD+21842";
 export const HOURS = "Mon - Sun: 8:30 AM – 8:30 PM";
 
-/* Social handles — placeholder until Angler's accounts are live.
-   Swap to Angler's URLs once handles are created. */
+/* Social handles — swap to Angler's URLs once more accounts are live. */
 export const SOCIAL = {
-  instagram: "",
+  instagram: "https://www.instagram.com/anglerwatersports",
   facebook: "",
   tiktok: "",
 };
