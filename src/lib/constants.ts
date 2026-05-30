@@ -13,7 +13,7 @@ export const SITE_TAGLINE = "Premium Watersports. Ocean City, MD.";
 /* Booking — currently still routes through OC's FareHarbor account.
    Swap to Angler's slug once the FareHarbor account is set up. */
 export const BOOKING_URL =
-  "https://fareharbor.com/embeds/book/dorchesterstreetjetski/items/?full-items=yes";
+  "https://fareharbor.com/embeds/book/dorchesterstreetjetski/items/?flow=1639604&full-items=yes";
 
 /* Geocoded coordinates for 312 Talbot Street, Ocean City, MD 21842
    (via OpenStreetMap Nominatim). Used in schema and the live weather +
